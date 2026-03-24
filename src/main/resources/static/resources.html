@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресурсы — Система бронирования корпоративных ресурсов</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="logo">RB</div>
+        <h2>Resource Booking</h2>
+        <nav>
+            <a href="/" class="nav-link">Главная</a>
+            <a href="/resources.html" class="nav-link active">Ресурсы</a>
+            <a href="/booking.html" class="nav-link">Создать бронирование</a>
+            <a href="/bookings.html" class="nav-link">Журнал бронирований</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <header class="page-header">
+            <div>
+                <h1>Каталог корпоративных ресурсов</h1>
+                <p>Просмотр и добавление ресурсов, доступных для бронирования</p>
+            </div>
+            <button class="btn" onclick="loadResourcesPage()">Обновить список</button>
+        </header>
+
+        <section class="panel">
+            <h2>Добавить ресурс</h2>
+            <form id="resourceForm" class="form-grid">
+                <input type="text" id="resourceName" placeholder="Название ресурса" required>
+                <input type="text" id="resourceType" placeholder="Тип (ROOM / EQUIPMENT)" required>
+                <input type="text" id="resourceLocation" placeholder="Местоположение">
+                <input type="text" id="resourceDescription" placeholder="Описание">
+                <button type="submit" class="btn full-width">Добавить ресурс</button>
+            </form>
+            <div id="resourcesMessage" class="message-box"></div>
+        </section>
+
+        <section class="panel">
+            <h2>Список ресурсов</h2>
+            <div id="resourceCards" class="card-grid"></div>
+        </section>
+    </main>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>

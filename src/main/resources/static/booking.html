@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать бронирование — Система бронирования корпоративных ресурсов</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="logo">RB</div>
+        <h2>Resource Booking</h2>
+        <nav>
+            <a href="/" class="nav-link">Главная</a>
+            <a href="/resources.html" class="nav-link">Ресурсы</a>
+            <a href="/booking.html" class="nav-link active">Создать бронирование</a>
+            <a href="/bookings.html" class="nav-link">Журнал бронирований</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <header class="page-header">
+            <div>
+                <h1>Создание бронирования</h1>
+                <p>Оформление новой заявки на корпоративный ресурс</p>
+            </div>
+        </header>
+
+        <div class="two-columns">
+            <section class="panel">
+                <h2>Форма бронирования</h2>
+                <form id="bookingForm" class="form-grid">
+                    <select id="bookingResourceId" required>
+                        <option value="">Выберите ресурс</option>
+                    </select>
+                    <input type="text" id="bookedBy" placeholder="ФИО сотрудника" required>
+                    <input type="datetime-local" id="startTime" required>
+                    <input type="datetime-local" id="endTime" required>
+                    <input type="text" id="purpose" placeholder="Цель бронирования">
+                    <button type="submit" class="btn full-width">Создать бронирование</button>
+                </form>
+                <div id="bookingMessage" class="message-box"></div>
+            </section>
+
+            <section class="panel">
+                <h2>Информация</h2>
+                <div class="info-card">
+                    <p><strong>Как работает процесс:</strong></p>
+                    <ol>
+                        <li>Выбирается ресурс из списка.</li>
+                        <li>Указывается интервал времени.</li>
+                        <li>Система проверяет наличие конфликта.</li>
+                        <li>При отсутствии пересечений бронь создаётся.</li>
+                    </ol>
+                </div>
+
+                <div class="info-card">
+                    <p><strong>Доступные ресурсы:</strong></p>
+                    <div id="resourcePreview" class="mini-list"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>

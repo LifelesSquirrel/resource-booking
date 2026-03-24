@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная — Система бронирования корпоративных ресурсов</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar">
+        <div class="logo">RB</div>
+        <h2>Resource Booking</h2>
+        <nav>
+            <a href="/" class="nav-link active">Главная</a>
+            <a href="/resources.html" class="nav-link">Ресурсы</a>
+            <a href="/booking.html" class="nav-link">Создать бронирование</a>
+            <a href="/bookings.html" class="nav-link">Журнал бронирований</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <header class="page-header">
+            <div>
+                <h1>Система бронирования корпоративных ресурсов</h1>
+                <p>Рабочий прототип для курсового проекта</p>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div>
+                <h2>Управление корпоративными ресурсами в одной системе</h2>
+                <p>
+                    Система позволяет просматривать перечень ресурсов, создавать бронирования,
+                    отслеживать занятость и отменять ранее созданные заявки.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn" href="/booking.html">Создать бронирование</a>
+                    <a class="btn secondary" href="/resources.html">Открыть каталог ресурсов</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span>Всего ресурсов</span>
+                <strong id="statResources">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>Активных ресурсов</span>
+                <strong id="statActiveResources">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>Всего бронирований</span>
+                <strong id="statBookings">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>Подтверждённых броней</span>
+                <strong id="statConfirmed">0</strong>
+            </div>
+        </section>
+
+        <section class="cards-grid">
+            <a class="feature-card" href="/resources.html">
+                <h3>Каталог ресурсов</h3>
+                <p>Просмотр и добавление переговорных комнат, оборудования и других ресурсов.</p>
+            </a>
+
+            <a class="feature-card" href="/booking.html">
+                <h3>Форма бронирования</h3>
+                <p>Создание бронирования на выбранный временной интервал.</p>
+            </a>
+
+            <a class="feature-card" href="/bookings.html">
+                <h3>Журнал бронирований</h3>
+                <p>Просмотр всех записей и отмена активных бронирований.</p>
+            </a>
+        </section>
+    </main>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>
